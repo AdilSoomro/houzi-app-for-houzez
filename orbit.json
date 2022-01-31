@@ -1,7 +1,9 @@
 {
   "version": 1,
   "planet": [
-    1,
+    1
+  ],
+  "dwarf": [
     2
   ]
 }
