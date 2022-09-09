@@ -639,6 +639,9 @@ section {
 }
 .gallery .swiper-slide {
   transition: 0.3s;
+  border: 3px solid #bababa;
+    padding: 2px;
+    background: #fff;
 }
 .gallery .swiper-pagination {
   margin-top: 20px;
@@ -668,7 +671,7 @@ section {
     z-index: 1;
     transform: scale(1.2);
     margin-top: 10px;
-    border-radius: 25px;
+    border-radius: 5px;
   }
 }
 
