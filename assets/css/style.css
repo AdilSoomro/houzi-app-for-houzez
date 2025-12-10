@@ -20,6 +20,27 @@
   /* Apple Blue */
   --color-accent-hover: #0077ed;
 
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Hero Screen Tuning Variables */
+  --hero-screen-top: 9%;
+  --hero-screen-left: 29%;
+  --hero-screen-width: 30%;
+  --hero-screen-height: 65.5%;
+  --hero-screen-radius: 17px;
+
+  /* Orbit Radius Variables - Responsive with equal spacing */
+  --orbit-r4: 18vw;
+  /* Closest orbit */
+  --orbit-r2: 24vw;
+  /* Inner-mid orbit */
+  --orbit-r1: 30vw;
+  /* Middle orbit */
+  --orbit-r5: 36vw;
+  /* Outer-mid orbit */
+  --orbit-r3: 42vw;
+  /* Furthest orbit */
+
   --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-heading: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -400,6 +421,12 @@ section {
   box-shadow: var(--shadow-md);
 }
 
+/* Remove card styling from specific images */
+.details img.no-card-style {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 /* Re-use Apple buttons for Details section buy buttons */
 .details .buy-btn,
 .details .apple-btn,
@@ -430,14 +457,104 @@ section {
   color: #fff;
 }
 
+/* Composition Images */
+.composition-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  perspective: 1000px;
+}
+
+.composition-container img {
+  position: absolute;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Bouncy Apple spring */
+  background: #fff;
+  /* Ensure no transparent backgrounds visible through overlap */
+}
+
+.comp-img-1 {
+  width: 55%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.comp-img-2 {
+  width: 55%;
+  top: 40px;
+  right: 0;
+  z-index: 2;
+}
+
+.comp-img-3 {
+  width: 65%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.composition-container:hover .comp-img-1 {
+  transform: translate(-10px, -10px) rotate(-3deg);
+  z-index: 4;
+}
+
+.composition-container:hover .comp-img-2 {
+  transform: translate(10px, -10px) rotate(3deg);
+  z-index: 4;
+}
+
+.composition-container:hover .comp-img-3 {
+  transform: translateX(-50%) translateY(-15px) scale(1.05);
+  /* Keep centered */
+  z-index: 5;
+}
+
+@media (max-width: 991px) {
+  .composition-container {
+    height: 400px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .composition-container {
+    height: 300px;
+  }
+}
+
+/* Specific adjustment for Filter section to close gap */
+.filter-composition .comp-img-3 {
+  bottom: 60px;
+}
+
+/* Make CRM stats leads image smaller to match other images */
+.crm-composition .comp-img-3 {
+  width: 45.5%;
+  /* 65% * 0.7 = 45.5% (30% smaller) */
+}
+
+.crm-composition:hover .comp-img-3 {
+  transform: translateX(-50%) translateY(-15px) scale(0.735);
+  /* 1.05 * 0.7 = 0.735 */
+}
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
 .gallery {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
+  /* Increased for pagination space */
   background: #000;
-  /* Dark mode specifically for gallery */
   color: #fff;
+  overflow: hidden;
+  /* Prevent scaled images from causing horizontal scroll */
 }
 
 .gallery .section-title h2,
@@ -445,22 +562,58 @@ section {
   color: #fff;
 }
 
+/* Gallery swiper wrapper - add padding to prevent cutoff */
+.gallery .swiper-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .gallery .swiper-slide {
   border: none;
   background: transparent;
   width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  /* Space for text label */
 }
 
 .gallery .swiper-slide img {
   border-radius: 20px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
   opacity: 0.6;
+  width: 100%;
+  height: auto;
 }
 
 .gallery .swiper-slide-active img {
   opacity: 1;
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Text label below image */
+.gallery .swiper-slide a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Pagination positioned below */
+.gallery .swiper-pagination {
+  bottom: 20px !important;
+  position: relative;
+  margin-top: 30px;
+}
+
+.gallery .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.gallery .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--color-accent);
 }
 
 /*--------------------------------------------------------------
@@ -535,6 +688,8 @@ section {
   font-weight: 600;
   font-size: 16px;
   transition: 0.2s;
+  margin-bottom: 15px;
+  /* Add spacing between buttons */
 }
 
 .pricing .upwork-btn:hover,
@@ -638,6 +793,355 @@ section {
 }
 
 .back-to-top {
+  /* Existing styles for shape and color */
   border-radius: 50%;
   background: var(--color-accent);
+
+  /* --- STYLES TO MAKE IT FLOAT (New) --- */
+
+  /* 1. Makes it fixed relative to the browser window (viewport) */
+  position: fixed;
+
+  /* 2. Positions it 15px from the right edge */
+  right: 15px;
+
+  /* 3. Positions it 15px from the bottom edge */
+  bottom: 15px;
+
+  /* 4. Ensures it appears above all other content on the page */
+  z-index: 99999;
+
+  /* 5. Sets a specific size for the button (required if you don't use padding) */
+  width: 44px;
+  height: 44px;
+
+  /* 6. Ensures the icon is centered (based on your HTML d-flex classes) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 7. Icon color */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Form Status Messages */
+.contact .php-email-form .loading,
+.contact .php-email-form .error-message,
+.contact .php-email-form .sent-message {
+  display: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact .php-email-form .loading {
+  background: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--color-accent);
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form .sent-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.contact .php-email-form .error-message {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero Animation Section */
+.hero-anim-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 600px;
+  perspective: 1000px;
+  /* Optional for 3D feel */
+  overflow: visible;
+  /* Allow hand to slide in from "outside" visually if needed */
+}
+
+.hand-container {
+  position: absolute;
+  right: -150px;
+  /* Push further right */
+  bottom: -150px;
+  /* Push further down */
+  width: auto;
+  /* Let it size naturally */
+  max-width: 800px;
+  /* Allow it to be huge */
+  animation: handSlideIn 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateX(200px);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  /* Let clicks pass through if it covers anything important */
+}
+
+.robotic-hand {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Removed drop-shadow to fix "weird card background" look */
+  position: relative;
+  z-index: 5;
+  /* Keep hand above icons */
+}
+
+/* Screen Placement - TUNED for Straight View */
+.screen-overlay {
+  position: absolute;
+  top: var(--hero-screen-top);
+  left: var(--hero-screen-left);
+  width: var(--hero-screen-width);
+  height: var(--hero-screen-height);
+  border-radius: var(--hero-screen-radius);
+  overflow: hidden;
+  z-index: 6;
+  /* On top of hand base */
+  background: #000;
+  /* Removed inset shadow for cleaner look */
+}
+
+.screen-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Orbit Tracks (Visible Paths) - 2D Flat Circles */
+.orbit-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Removed rotateX for flat 2D */
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.orbit-track.track-1 {
+  width: calc(var(--orbit-r1) * 2);
+  height: calc(var(--orbit-r1) * 2);
+}
+
+.orbit-track.track-2 {
+  width: calc(var(--orbit-r2) * 2);
+  height: calc(var(--orbit-r2) * 2);
+}
+
+.orbit-track.track-3 {
+  width: calc(var(--orbit-r3) * 2);
+  height: calc(var(--orbit-r3) * 2);
+}
+
+.orbit-track.track-4 {
+  width: calc(var(--orbit-r4) * 2);
+  height: calc(var(--orbit-r4) * 2);
+}
+
+.orbit-track.track-5 {
+  width: calc(var(--orbit-r5) * 2);
+  height: calc(var(--orbit-r5) * 2);
+}
+
+/* Orbiting Icons */
+.orbit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  /* Center the icon: half of 50px width */
+  margin-top: -25px;
+  /* Center the icon: half of 50px height */
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Subtle border for definition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--color-accent);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  /* Behind hand? or use z-index animation */
+}
+
+/* Simplified 2D Orbit Animation */
+/* Wrapper rotates entire "solar system" or just individual icons? 
+   Better approach: Rotate the *container* of the icon, and counter-rotate the icon. 
+   But here we are animating the icon element directly. */
+
+@keyframes orbitAnim1 {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r1)) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r1)) rotate(-360deg);
+  }
+}
+
+@keyframes orbitAnim2 {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r2)) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r2)) rotate(-360deg);
+  }
+}
+
+@keyframes orbitAnim3 {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r3)) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r3)) rotate(-360deg);
+  }
+}
+
+@keyframes orbitAnim4 {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r4)) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r4)) rotate(-360deg);
+  }
+}
+
+@keyframes orbitAnim5 {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-r5)) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-r5)) rotate(-360deg);
+  }
+}
+
+.orbit-icon.icon-1 {
+  animation: orbitAnim1 20s linear infinite 0s;
+}
+
+.orbit-icon.icon-2 {
+  animation: orbitAnim2 15s linear infinite -3s;
+}
+
+.orbit-icon.icon-3 {
+  animation: orbitAnim3 25s linear infinite -7s;
+}
+
+.orbit-icon.icon-4 {
+  animation: orbitAnim4 12s linear infinite -5s;
+}
+
+.orbit-icon.icon-5 {
+  animation: orbitAnim5 22s linear infinite -10s;
+}
+
+@keyframes handSlideIn {
+  0% {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+
+  /* Increase orbit radii on mobile with equal 4vw spacing */
+  :root {
+    --orbit-r4: 24vw;
+    /* Closest orbit */
+    --orbit-r2: 30vw;
+    /* Inner-mid orbit */
+    --orbit-r1: 36vw;
+    /* Middle orbit */
+    --orbit-r5: 42vw;
+    /* Outer-mid orbit */
+    --orbit-r3: 48vw;
+    /* Furthest orbit */
+  }
+
+  /* Adjust radius for smaller screens so it doesn't look too round */
+  .screen-overlay {
+    --hero-screen-radius: 12px;
+  }
+
+  .hero-anim-container {
+    height: auto;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .hand-container {
+    max-width: 450px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  @keyframes orbitAnim {
+    0% {
+      transform: rotate(0deg) translateX(160px) rotate(0deg);
+      scale: 1;
+    }
+
+    50% {
+      transform: rotate(180deg) translateX(160px) rotate(-180deg);
+      scale: 0.8;
+    }
+
+    100% {
+      transform: rotate(360deg) translateX(160px) rotate(-360deg);
+      scale: 1;
+    }
+  }
 }
