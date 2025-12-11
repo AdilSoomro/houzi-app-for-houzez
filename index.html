@@ -32,13 +32,98 @@
   <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
   <meta name="twitter:card" content="assets/img/banner.jpg"> <!-- to have large image post format in Twitter -->
 
-  <title>Houzi app for Houzez</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta content="real estate, houzez app" name="keywords">
+  <title>Houzi - Ultimate Real Estate Mobile App for Houzez</title>
+  <meta name="robots" content="index, follow">
+  <meta content="real estate, houzez app, flutter app, property app" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Houzi",
+        "operatingSystem": "Android, iOS",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "59.00",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "500"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is included in the purchase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your purchase includes the full Flutter source code for both Android and iOS, the Houzi Rest API plugin for WordPress to manage the app, Houzi Builder to customize the app layouts and detailed documentation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it a one-time payment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, it is a strictly one-time payment. There are no recurring monthly or annual subscription fees for the standard license."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I get free updates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you will receive all future updates for free for the lifetime of the product. We regularly release new features and improvements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it support RTL and multiple languages?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the app is fully translation-ready and includes support for RTL (Right-to-Left) languages like Arabic. You can easily translate the app into any language."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does it sync with my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Houzi seamlessly connects with your Houzez WordPress website using a REST API. All properties, agents, agencies, and CRM data are synced in real-time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I need before starting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You will need a few essentials: a live WordPress website based on the Houzez theme, a valid Houzi license from CodeCanyon, Google Play & Apple Developer accounts for publishing, and your app icon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What platforms does this code support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Houzi is developed using Flutter, Google's UI toolkit, which enables the production of high-performance, natively compiled applications for both Android and iOS from a single codebase."
+            }
+          }
+        ]
+      }
+    ]
+  </script>
 
   <!-- Google Fonts -->
   <!-- Google Fonts -->
@@ -84,7 +169,7 @@
       <div class="logo">
         <!-- <h1><a href="index.html"><img src="assets/img/logo.svg" alt="Houz"></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/logo.svg" alt="" class="img-fluid"></a>
+        <a href="index.html"><img src="assets/img/logo.svg" alt="Houzi Logo" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -155,7 +240,7 @@
             <div class="orbit-icon icon-5"><i class="bx bx-bar-chart-alt-2"></i></div>
             <img src="assets/img/robotic-hand-phone.png" class="robotic-hand" alt="Robotic Hand">
             <div class="screen-overlay">
-              <img src="assets/img/hero-home.jpg" alt="Screen Content">
+              <img src="assets/img/hero-home.jpg" alt="Houzi App Home Screen">
             </div>
 
 
@@ -216,38 +301,38 @@
               <div class="row">
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-receipt"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-2.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-2.svg" alt="Compatibility Icon">
                   <h4>Compatible with Houzez</h4>
                   <p>Fully compatibile and integrates with Houzez theme</p>
                 </div>
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-cube-alt"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-3.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-3.svg" alt="Performance Icon">
                   <h4>Great Performance</h4>
                   <p>Top quality app with slick design, higly customizable theme and optimized code</p>
                 </div>
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-images"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-4.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-4.svg" alt="Rich Features Icon">
                   <h4>Features Enrich</h4>
                   <p>Powerful search, filter, maps, details, communications and all real estate features</p>
                 </div>
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-shield"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-6.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-6.svg" alt="Free Updates Icon">
                   <h4>Free Updates</h4>
                   <p>Don't worry about future costs, pay once and receive all future updates at no extra cost</p>
                 </div>
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-atom"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-1.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-1.svg" alt="CRM Icon">
                   <h4>Houzez CRM</h4>
                   <p>Bundled with all features of Houzez CRM in your palm. Track Activites, follow Leads, reply to
                     Enquiries and close Deals.</p>
                 </div>
                 <div class="col-md-4 icon-box">
                   <!-- <i class="bx bx-id-card"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-7.svg" alt="alternative">
+                  <img class="img-fluid" src="assets/img/features-icon-7.svg" alt="Translation Icon">
                   <h4>Translation Ready</h4>
                   <p>Fully RTL supported, Available in English, French, Spanish, Arabic, Russian, Turkish and many
                     more...</p>
@@ -468,6 +553,212 @@
       </div>
     </section><!-- End Gallery Section -->
 
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>User Reviews</h2>
+          <p>What our satisfied customers are saying about Houzi on CodeCanyon.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I had an excellent experience with the support team while customizing my real estate app. Their
+                  assistance was both helpful and supportive, ensuring a smooth and efficient customization process.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>ssofien</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  One of the best apps out there for real estate. Advanced search features no other apps have. Clean
+                  modern design. The dev team backs up their products with amazing support.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>bestutahrealestate</h3>
+                  <h4>for Feature Availability</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Excellent customer support, documentation and product quality.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>luisantonio197</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I love the customer support very much. Also the clean code with almost zero confusion in
+                  documentation.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>sandeepk57</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  So Professional Developers and Technical Support.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>aymanwbbo</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Amazing app. I love it. You guys are awesome!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>alisara2me</h3>
+                  <h4>for Customizability</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  I recently purchased the Houzi Real Estate App from CodeCanyon, and I must say, it has exceeded my
+                  expectations in every way! As a real estate professional, I was looking for a robust solution. Houzi
+                  delivered on all fronts.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>repute</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  This code is one of the best available on CodeCanyon! The support provided is exceptional and always
+                  responsive! Amazing service!
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>sohailahmed160</h3>
+                  <h4>for Customer Support</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Really amazing job , app code is reliable , documentation is amazing , and support is great.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>marios858</h3>
+                  <h4>for Documentation Quality</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Great product. Great customer service. Great design. Easy use and customization. I only have basic
+                  understanding of coding, but it was very easy for me to use this product. Great job guys.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div class="testimonial-info">
+                  <h3>Phillipal</h3>
+                  <h4>for Code Quality</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
@@ -568,6 +859,107 @@
 
       </div>
     </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Answers to the most common questions about Houzi mobile app.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                data-bs-target="#faq-list-1">What is included in the purchase? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Your purchase includes the full Flutter source code for both Android and iOS, the Houzi Builder plugin
+                  for WordPress to manage the app, detailed documentation, and 6 months of customer support.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                class="collapsed">Is it a one-time payment? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, it is a strictly one-time payment. There are no recurring monthly or annual subscription fees for
+                  the standard license.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                class="collapsed">Do I get free updates? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, you will receive all future updates for free for the lifetime of the product. We regularly
+                  release new features and improvements.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
+                class="collapsed">Does it support RTL and multiple languages? <i
+                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, the app is fully translation-ready and includes support for RTL (Right-to-Left) languages like
+                  Arabic. You can easily translate the app into any language.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
+                class="collapsed">How does it sync with my website? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Houzi seamlessly connects with your Houzez WordPress website using a REST API. All properties, agents,
+                  agencies, and CRM data are synced in real-time.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6"
+                class="collapsed">What do I need before starting? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  You will need a few essentials: a live WordPress website based on the Houzez theme, a valid Houzi
+                  license from CodeCanyon, Google Play & Apple Developer accounts for publishing, and your app icon.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="600">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7"
+                class="collapsed">What platforms does this code support? <i class="bx bx-chevron-down icon-show"></i><i
+                  class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Houzi is developed using Flutter, Google's UI toolkit, which enables the production of
+                  high-performance, natively compiled applications for both Android and iOS from a single codebase.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Pricing Section ======= -->
     <section id="" class="section-bg">

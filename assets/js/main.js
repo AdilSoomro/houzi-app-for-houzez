@@ -112,6 +112,7 @@
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
+    select('#header').classList.toggle('mobile-nav-active')
   })
 
   /**
@@ -137,6 +138,7 @@
         let navbarToggle = select('.mobile-nav-toggle')
         navbarToggle.classList.toggle('bi-list')
         navbarToggle.classList.toggle('bi-x')
+        select('#header').classList.remove('mobile-nav-active')
       }
       scrollto(this.hash)
     }

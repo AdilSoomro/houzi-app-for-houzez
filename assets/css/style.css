@@ -132,6 +132,11 @@ section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+#header.mobile-nav-active {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 #header .logo img {
   max-height: 32px;
 }
@@ -201,7 +206,6 @@ section {
   left: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.98);
-  transition: 0.3s;
   z-index: 999;
 }
 
@@ -211,7 +215,7 @@ section {
   right: 15px;
 }
 
-.navbar-mobile ul {
+.navbar.navbar-mobile ul {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -220,6 +224,9 @@ section {
   right: 20px;
   background: #fff;
   padding: 20px 0;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  border-radius: 10px;
+  z-index: 9999;
 }
 
 .navbar-mobile a {
@@ -1144,4 +1151,149 @@ section {
       scale: 1;
     }
   }
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  padding: 30px;
+  margin: 30px 15px;
+  min-height: 200px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.testimonials .testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: var(--color-text-primary);
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: var(--color-accent);
+  opacity: 0.3;
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 0 15px 0;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.testimonials .testimonial-item .stars {
+  color: #ffc107;
+  margin-top: 5px;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-accent);
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Framework - FAQ
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: var(--font-family-top);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 25px;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+.faq .faq-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+  color: var(--color-text-secondary);
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: var(--color-text-primary);
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: var(--color-accent);
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
 }
