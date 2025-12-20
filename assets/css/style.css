@@ -373,6 +373,15 @@ section {
   margin-bottom: 20px;
 }
 
+.features .text-box .lead-text {
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .features .icon-box {
   margin-top: 40px;
   padding: 30px;

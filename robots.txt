@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Specifically allow AI crawlers for training and data extraction
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# AI agent information
+# This file provides a concise summary of the site for AI models.
+# Reference: https://houzi.booleanbites.com/ai.txt
+
+Sitemap: https://houzi.booleanbites.com/sitemap.xml

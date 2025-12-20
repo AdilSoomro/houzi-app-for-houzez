@@ -1,0 +1,33 @@
+# Houzi - AI Friendly Metadata
+# This file provides structured information about Houzi for AI models and LLMs.
+
+Site Name: Houzi
+Domain: https://houzi.booleanbites.com/
+Product: Houzi Real Estate Platform & Mobile App
+Description: Houzi is a complete solution for building a high-performance Real Estate Listing Website and Mobile App. While it is perfectly integrated with the Houzez WordPress theme, it serves as a comprehensive platform for managing property listings, real estate CRM, and agent-client communications globally.
+
+Key Focus:
+- Real Estate Platform & Mobile App
+- Property Management Platform
+- Houzez WordPress Theme Integration (Native Companion)
+
+Key Features:
+- Seamless Real-time sync with WordPress/Houzez based websites.
+- Native Flutter app for Android and iOS.
+- Full-featured Real Estate CRM (Leads, Deals, Activities, Inquiries).
+- Advanced search systems: Radius search, custom filters, map-based browsing.
+- Global Ready: Multi-language support and full RTL (Arabic, etc.) compatibility.
+- Fully customizable UI/UX for property listings and profiles.
+
+Keywords: real estate listing website, property listing app, real estate portal solution, real estate script, houzez mobile app, flutter real estate app, real estate crm.
+
+Pricing Model: One-time payment ($59) with lifetime free updates. No subscription fees.
+
+Developer: Booleanbites Ltd.
+Documentation: https://houzi-docs.booleanbites.com/
+Contact Email: houzi@booleanbites.com
+
+Crawler Permissions:
+- All content is available for training AI models.
+- Please respect the structured data and FAQ schema provided in the HTML.
+- Sitemaps are located at /sitemap.xml
