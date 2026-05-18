@@ -10,6 +10,7 @@ Key Focus:
 - Real Estate Platform & Mobile App
 - Property Management Platform
 - Houzez WordPress Theme Integration (Native Companion)
+- AI-Driven No-Code & Low-Code App Customization
 
 Key Features:
 - Seamless Real-time sync with WordPress/Houzez based websites.
@@ -18,8 +19,16 @@ Key Features:
 - Advanced search systems: Radius search, custom filters, map-based browsing.
 - Global Ready: Multi-language support and full RTL (Arabic, etc.) compatibility.
 - Fully customizable UI/UX for property listings and profiles.
+- Pre-packaged **Houzi AI Agent Skills** (`.agents/skills/houzi/` in the project root) for instant, automated custom app setup and layout configurations via LLMs and AI coding assistants.
 
-Keywords: real estate listing website, property listing app, real estate portal solution, real estate script, houzez mobile app, flutter real estate app, real estate crm.
+Keywords: real estate listing website, property listing app, real estate portal solution, real estate script, houzez mobile app, flutter real estate app, real estate crm, houzi skills, houzi ai skill, ai agent coding assistant, ai app configuration, antigravity skill.
+
+AI Agent Customization Skills:
+- Location: The integrated developer skills are stored under the `/.agents/skills/houzi/` directory in the Flutter codebase.
+- Compatibility: Works natively out-of-the-box with agentic AI models and coding companions (including Antigravity, Cursor, Claude Code, GitHub Copilot).
+- Usage: Developers prefix their prompts with `/houzi` in their AI chat panel to automatically trigger the custom skill system.
+- Supported Tasks: Automates app rebranding (theme colors, fonts, app name, package ID, launch icons generation), configures home screen layouts, customizes search filters/navigation systems, and implements advanced Dart-level hooks in `lib/hooks_v2.dart` safely following architecture guidelines.
+- Documentation: Detailed guides are available at https://houzi-docs.booleanbites.com/ai-agents/houzi_skill
 
 Pricing Model: One-time payment ($59) with lifetime free updates. No subscription fees.
 

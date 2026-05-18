@@ -1306,3 +1306,203 @@ section {
 .faq .faq-list a.collapsed .icon-close {
   display: none;
 }
+
+/*--------------------------------------------------------------
+# AI Agent Skill Custom Mockup & Section
+--------------------------------------------------------------*/
+.ai-skills-section {
+  background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.04) 0%, rgba(255, 255, 255, 0) 50%),
+              radial-gradient(circle at 20% 80%, rgba(0, 113, 227, 0.04) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.ai-chat-container {
+  width: 100%;
+  max-width: 550px;
+  background: rgba(30, 30, 35, 0.85);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25), 0 0 100px rgba(99, 102, 241, 0.15);
+  color: #f5f5f7;
+  overflow: hidden;
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  margin: 0 auto;
+}
+
+.ai-chat-header {
+  background: rgba(20, 20, 22, 0.9);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ai-chat-header .dots {
+  display: flex;
+  gap: 6px;
+}
+
+.ai-chat-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.ai-chat-header .dot-red { background: #ff5f56; }
+.ai-chat-header .dot-yellow { background: #ffbd2e; }
+.ai-chat-header .dot-green { background: #27c93f; }
+
+.ai-chat-header .title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #86868b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ai-chat-header .status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #34c759;
+}
+
+.ai-chat-header .status-pulse {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 10px #34c759; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.ai-chat-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-height: 480px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.ai-bubble {
+  max-width: 85%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.ai-bubble.user {
+  background: var(--color-accent);
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+.ai-bubble.assistant {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e8e8ed;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ai-bubble-meta {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+
+.ai-bubble.user .ai-bubble-meta {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: right;
+}
+
+.ai-code-diff {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 12px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+  text-align: left;
+}
+
+.ai-code-diff span {
+  display: block;
+}
+
+.ai-code-diff .diff-rem {
+  color: #ff453a;
+  background: rgba(255, 69, 58, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.ai-code-diff .diff-add {
+  color: #30d158;
+  background: rgba(48, 209, 88, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.ai-code-diff .diff-ctx {
+  color: #8e8e93;
+  padding: 2px 4px;
+}
+
+.ai-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #0071e3, #a855f7);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 980px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+}
+
+.ai-skills-features {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+  text-align: left;
+}
+
+.ai-skills-features li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+.ai-skills-features li i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  font-size: 22px;
+  color: #a855f7;
+}
+
+.ai-skills-features li strong {
+  color: var(--color-text-primary);
+  display: block;
+  margin-bottom: 4px;
+}

@@ -32,5 +32,7 @@ Allow: /
 # AI agent information
 # This file provides a concise summary of the site for AI models.
 # Reference: https://houzi.booleanbites.com/ai.txt
+# AI Agent Skills Documentation: https://houzi-docs.booleanbites.com/ai-agents/houzi_skill
+# Workspace Skill System Path: /.agents/skills/houzi/
 
 Sitemap: https://houzi.booleanbites.com/sitemap.xml
