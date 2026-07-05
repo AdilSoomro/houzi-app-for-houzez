@@ -186,12 +186,12 @@
   </script>
 
   <!-- Google Fonts -->
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <!-- "SF Pro Display" is not served by Google Fonts; the CSS falls back to the system
+       -apple-system stack, which already renders SF Pro on Apple devices. -->
+
 
   <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -208,16 +208,14 @@
   <!-- Global site tag (gtag.js) - Google Ads: 860012716 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-860012716"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
     gtag('config', 'AW-860012716');
   </script>
-  <!-- Event snippet for Website traffic conversion page -->
-  <script>
-    gtag('event', 'conversion', { 'send_to': 'AW-860012716/DOFpCJDOgaEDEKyBi5oD' });
-  </script>
+  <!--
+    NOTE: The old page-load conversion event was removed. It fired on EVERY visit,
+    so Google Ads counted 100% of traffic as a conversion and could not optimise.
+    Real conversions (clicks to CodeCanyon / hire-us) are now tracked as click
+    events at the bottom of <body>. See the "Google Ads click conversions" script.
+  -->
 </head>
 
 <body>
@@ -264,22 +262,18 @@
       <div class="row align-items-center">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <div data-aos="fade-up">
-            <h1>Houzi</h1>
-            <h2>the app that powers your real estate platform.</h2>
+            <h1>Real estate app for Houzez</h1>
+            <h2>Your real estate app is ready to launch</h2>
+            <p class="hero-sub">A native iOS &amp; Android app that syncs with your Houzez site —
+              one&#8209;time&nbsp;$59, full Flutter source, no monthly fees.</p>
             <div class="d-flex flex-wrap gap-3 mt-4">
               <a href="https://codecanyon.net/item/houzi-real-estate-app/39753350" class="btn-apple-style primary">
                 <i class="bx bx-cart"></i> Buy License $59
               </a>
-              <a href="https://apps.apple.com/us/app/houzi-app-for-houzez/id1598357211"
-                class="btn-apple-style secondary">
-                <i class="bx bxl-apple"></i> App Store
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.booleanbites.houzez"
-                class="btn-apple-style secondary">
-                <i class="bx bxl-play-store"></i> Google Play
+              <a href="#gallery" class="btn-apple-style secondary scrollto">
+                <i class="bx bx-play-circle"></i> See it live
               </a>
             </div>
-            <!-- <p class="mt-3 text-muted small">* One-time payment. Lifetime updates.</p> -->
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-anim-container">
@@ -312,12 +306,58 @@
 
   <main id="main">
 
+    <!-- ======= How It Works Section ======= -->
+    <section id="how" class="how-it-works section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>How does it work?</h2>
+          <p class="py-2">New here? It's a simple 3-step picture —
+            <strong>Houzez</strong> is your <em>website</em>, <strong>Houzi</strong> is your <em>app</em>.</p>
+        </div>
+
+        <div class="row how-steps g-4">
+
+          <div class="col-md-4 how-step">
+            <div class="how-num">1</div>
+            <div class="how-icon"><i class="bx bx-globe"></i></div>
+            <h3>Have your own website with Houzez</h3>
+            <p><strong>Houzez</strong> is the #1 real estate WordPress theme. Your site holds all your listings, agents
+              and leads.</p>
+          </div>
+
+          <div class="col-md-4 how-step">
+            <div class="how-num">2</div>
+            <div class="how-icon"><i class="bx bx-mobile-alt"></i></div>
+            <h3>Get your own app with Houzi</h3>
+            <p><strong>Houzi</strong> is the mobile app that connects to your Houzez site and syncs everything
+              automatically.</p>
+          </div>
+
+          <div class="col-md-4 how-step">
+            <div class="how-num">3</div>
+            <div class="how-icon"><i class="bx bx-rocket"></i></div>
+            <h3>Grow your real estate business</h3>
+            <p>Publish to the App Store &amp; Google Play and put your brand in every client's pocket.</p>
+          </div>
+
+        </div>
+
+        <p class="how-note">
+          <i class="bx bx-info-circle"></i>
+          To publish you'll need hosting for your Houzez website, and developer accounts on
+          <strong>Apple</strong> &amp; <strong>Google Play</strong> for your Houzi-based app.
+        </p>
+
+      </div>
+    </section><!-- End How It Works Section -->
+
     <!-- ======= Trust/Stats Section (New) ======= -->
     <section id="trust" class="trust section-bg-light">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center text-center">
           <div class="col-md-3 col-6">
-            <h3 class="counter">500+</h3>
+            <h3 class="counter">550+</h3>
             <p>Apps Launched</p>
           </div>
           <div class="col-md-3 col-6">
@@ -336,83 +376,134 @@
       </div>
     </section>
 
+    <!-- ======= Audiences Section ======= -->
+    <section id="audiences" class="audiences">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Built for Developers, Agencies &amp; Realtors</h2>
+          <p class="py-2">Whoever you are, Houzi hands you a production-ready real estate app on day one.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="audience-card">
+              <div class="audience-icon"><i class="bx bx-code-alt"></i></div>
+              <h3>Developers &amp; Freelancers</h3>
+              <p>Ship client apps faster with the full Flutter source and AI Agent Skills — rebrand, customize and deploy
+                without building from scratch.</p>
+              <ul>
+                <li><i class="bx bx-check"></i> Full Flutter source code</li>
+                <li><i class="bx bx-check"></i> AI Agent Skills for rapid setup</li>
+                <li><i class="bx bx-check"></i> Clean, documented codebase</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="audience-card">
+              <div class="audience-icon"><i class="bx bx-buildings"></i></div>
+              <h3>Real Estate Agencies</h3>
+              <p>Give your whole team a branded app with a built-in CRM. Track leads, manage listings and close deals from
+                anywhere.</p>
+              <ul>
+                <li><i class="bx bx-check"></i> Houzez CRM in your pocket</li>
+                <li><i class="bx bx-check"></i> Leads, inquiries &amp; deals</li>
+                <li><i class="bx bx-check"></i> Multi-agent &amp; agency profiles</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="audience-card">
+              <div class="audience-icon"><i class="bx bx-home-heart"></i></div>
+              <h3>Realtors &amp; Agents</h3>
+              <p>Put your own app on the App Store and Google Play to grow your brand and stay in front of your buyers.</p>
+              <ul>
+                <li><i class="bx bx-check"></i> Your own branded app</li>
+                <li><i class="bx bx-check"></i> Advanced search &amp; maps</li>
+                <li><i class="bx bx-check"></i> Push notifications to clients</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Audiences Section -->
+
     <!-- ======= App Features Section ======= -->
     <section id="features" class="features">
       <div class="container">
 
         <div class="text-box mb-5 section-bg py-5 px-5">
 
-          <h3>Power your real estate experience with Houzi</h3>
-          <p class="mb-4 lead-text">Build a high-performance real estate website and mobile app with Houzi. Seamlessly
-            integrated with
-            Houzez, Houzi provides a complete platform to manage every aspect of your business — from listings and leads
-            to client engagement and mobile reach. Experience a smarter, faster, and fully connected real estate
-            solution.</p>
-          <a href="app-for-houzez.html" class="buy-btn scrollto"><i class="bx bx-book"></i>Read More</a>
+          <h3>How Houzi works with Houzez</h3>
+          <p class="mb-4 lead-text">Houzi is the native mobile companion to the Houzez WordPress theme. It connects to
+            your website over a secure REST API and keeps every listing, agent and CRM record in sync automatically —
+            no duplicate data entry, ever. Want the full picture of how the two fit together?</p>
+          <a href="app-for-houzez.html" class="buy-btn scrollto"><i class="bx bx-book"></i>Read the full guide</a>
 
         </div> <!-- end of text-box -->
 
         <div class="section-title">
-          <h2>App Features</h2>
-          <p class="py-2">The perfect solution for your real estate platform, Houzi is a super flexible and powerful
-            listing
-            app with top-notch features for real estate agents and companies. Seamlessly integrated with Houzez for a
-            professional experience.</p>
+          <h2>Why build your app on Houzi</h2>
+          <p class="py-2">A one-time price, the full source code, and a native app that stays perfectly in sync with your
+            Houzez site — here's what sets Houzi apart.</p>
         </div>
 
-        <div class="row no-gutters">
-          <div class="col-xl-12 d-flex align-items-stretch order-2 order-lg-1">
-            <div class="content d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-receipt"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-2.svg" alt="Compatibility Icon">
-                  <h4>Compatible with Houzez</h4>
-                  <p>Fully compatibile and integrates with Houzez theme</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-cube-alt"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-3.svg" alt="Performance Icon">
-                  <h4>Great Performance</h4>
-                  <p>Top quality app with slick design, higly customizable theme and optimized code</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-images"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-4.svg" alt="Rich Features Icon">
-                  <h4>Features Enrich</h4>
-                  <p>Powerful search, filter, maps, details, communications and all real estate features</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-shield"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-6.svg" alt="Free Updates Icon">
-                  <h4>Free Updates</h4>
-                  <p>Don't worry about future costs, pay once and receive all future updates at no extra cost</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-atom"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-1.svg" alt="CRM Icon">
-                  <h4>Houzez CRM</h4>
-                  <p>Bundled with all features of Houzez CRM in your palm. Track Activites, follow Leads, reply to
-                    Enquiries and close Deals.</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <!-- <i class="bx bx-id-card"></i> -->
-                  <img class="img-fluid" src="assets/img/features-icon-7.svg" alt="Translation Icon">
-                  <h4>Translation Ready</h4>
-                  <p>Fully RTL supported, Available in English, French, Spanish, Arabic, Russian, Turkish and many
-                    more...</p>
-                </div>
-                <div class="col-md-4 icon-box">
-                  <img class="img-fluid" src="assets/img/features-icon-5.svg" alt="AI Agent Icon">
-                  <h4>AI Agent Skills</h4>
-                  <p>Customize and setup your app using plain English chat commands with agentic coding companions like Antigravity.</p>
-                </div>
-              </div>
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon"><img src="assets/img/features-icon-2.svg" alt="Houzez Sync Icon"></div>
+              <h4>Live Houzez Sync</h4>
+              <p>Connects over a secure REST API — works with every Houzez demo and your custom fields, with no duplicate
+                data entry.</p>
             </div>
           </div>
-          <!-- <div  class="image col-xl-5 d-flex justify-content-center order-1 order-lg-2" >
-            <img style="display:none;" src="assets/img/features.png" class="img-fluid" alt="">
-          </div> -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon"><img src="assets/img/features-icon-3.svg" alt="Native App Icon"></div>
+              <h4>Native iOS &amp; Android</h4>
+              <p>One Flutter codebase delivering true native performance on both the App Store and Google Play.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon"><img src="assets/img/features-icon-4.svg" alt="Source Code Icon"></div>
+              <h4>Full Source Code</h4>
+              <p>You own the complete Flutter project — rebrand, extend or customize absolutely anything.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon"><img src="assets/img/features-icon-6.svg" alt="Free Updates Icon"></div>
+              <h4>Lifetime Free Updates</h4>
+              <p>Pay once. Every future feature and fix is included, at no extra cost — forever.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon"><img src="assets/img/features-icon-7.svg" alt="Translation Icon"></div>
+              <h4>Translation &amp; RTL Ready</h4>
+              <p>Ships in English, Spanish, French, Arabic, Russian, Turkish and many more — with full RTL support.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card feature-card-ai">
+              <div class="feature-icon"><img src="assets/img/features-icon-5.svg" alt="AI Agent Icon"></div>
+              <h4>AI Agent Skills <span class="feature-badge">NEW</span></h4>
+              <p>Configure, recolor and rebrand your app with plain-English prompts using AI agents like Antigravity.</p>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -421,6 +512,12 @@
     <!-- ======= Details Section ======= -->
     <section id="details" class="details">
       <div class="container">
+
+        <div class="section-title">
+          <h2>A closer look inside the app</h2>
+          <p class="py-2">Every screen your clients and agents will use — advanced search, rich listings, real-time
+            insights and a full CRM, all beautifully designed and native on iOS &amp; Android.</p>
+        </div>
 
         <div class="row content align-items-center">
           <div class="col-lg-6">
@@ -435,12 +532,11 @@
           </div>
 
           <div class="col-lg-6 pt-5">
-            <h3>Incredible Control on Search Filter</h3>
+            <h3>Search the way buyers think</h3>
 
-            <p class="pt-5">Houzi comes with advance search system with various modern features like geo location
-              based radius search, city, area and type based searches. It contains advanced filter options
-              based on prices, area size, bedrooms and bathrooms counts.</p>
-            <p>User can save searches, get alerts for a search criteria.</p>
+            <p class="pt-5">Houzi ships with an advanced search system — geo-location radius search plus city, area
+              and type filters, refined by price, area size, bedrooms and bathrooms.</p>
+            <p>Users can save searches and get instant alerts whenever a new matching listing goes live.</p>
 
           </div>
         </div>
@@ -457,12 +553,13 @@
             </div>
           </div>
           <div class="col-lg-6 pt-5 order-2 order-lg-1">
-            <h3>Powerful Search and Results</h3>
+            <h3>Browse listings any way you like</h3>
             <p class="pt-5">
-              Houzi comes with multiple pre-designed gorgeous result item that you can choose to
-              show in list. Listing can be filtered with different parameters or reordered by pricing or
-              dates. All listing can also be browsed on map and carousel.</p>
-            <p>All listing can also be browsed on map and carousel.</p>
+              Choose from multiple pre-designed, gorgeous list layouts. Filter listings by any parameter or reorder
+              them by price or date to surface exactly what your buyers are looking for.</p>
+            <p>Every listing can also be browsed on an interactive map or a swipeable carousel — and you choose the map
+              engine: <strong>Google Maps</strong>, <strong>Mapbox</strong>, or free <strong>OpenStreetMap</strong> (no
+              billing, no lock-in).</p>
           </div>
         </div>
 
@@ -479,13 +576,11 @@
           </div>
 
           <div class="col-lg-6 pt-5">
-            <h3>Gorgeous Property Details</h3>
+            <h3>Every property, in full detail</h3>
             <p class="pt-5">
-              Information enriched, fully featured property details page contains every relevant modern
-              details widgets. A page that consist of photos gallery, property features section,
-              description, prices, agent or agency info, maps, ratings and reviews.</p>
-            <p>Customer can also schedule visits to the property along with inquire about property contact
-              form for customers to reach out to your agents.</p>
+              A rich, fully-featured property page with every modern widget — a photo gallery, features section,
+              description, pricing, agent &amp; agency info, maps, ratings and reviews.</p>
+            <p>Customers can schedule a visit or reach out to your agents right from the property's contact form.</p>
           </div>
         </div>
 
@@ -501,7 +596,7 @@
             </div>
           </div>
           <div class="col-lg-6 pt-5 order-2 order-lg-1">
-            <h3>Insights & Analytics</h3>
+            <h3>See what's working, in real time</h3>
             <p class="pt-5">Gain valuable feedback with built-in analytics. Track property performance and user
               engagement in real-time.</p>
             <ul>
@@ -539,6 +634,59 @@
                 instantly.</li>
               <li><i class="bx bx-trophy"></i> <strong>Win Deals:</strong> Manage your pipeline and schedule tours on
                 the go.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Push Notifications Section -->
+        <div class="row content align-items-center">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="notif-stack">
+              <div class="notif-card">
+                <div class="notif-icon"><i class="bx bx-bell"></i></div>
+                <div class="notif-body">
+                  <div class="notif-top"><span class="notif-app">HOUZI</span><span class="notif-time">now</span></div>
+                  <div class="notif-title">New match for “Miami Villas”</div>
+                  <div class="notif-text">A 3-bed villa just listed at $485,000.</div>
+                </div>
+              </div>
+              <div class="notif-card">
+                <div class="notif-icon icon-lead"><i class="bx bx-user-plus"></i></div>
+                <div class="notif-body">
+                  <div class="notif-top"><span class="notif-app">HOUZI</span><span class="notif-time">2m ago</span></div>
+                  <div class="notif-title">New lead — Peter Parker</div>
+                  <div class="notif-text">Interested in “Ample Apartment”.</div>
+                </div>
+              </div>
+              <div class="notif-card">
+                <div class="notif-icon icon-msg"><i class="bx bx-message-rounded-dots"></i></div>
+                <div class="notif-body">
+                  <div class="notif-top"><span class="notif-app">HOUZI</span><span class="notif-time">15m ago</span></div>
+                  <div class="notif-title">New inquiry on your listing</div>
+                  <div class="notif-text">“Is this property still available?”</div>
+                </div>
+              </div>
+              <div class="notif-card">
+                <div class="notif-icon icon-review"><i class="bx bxs-star"></i></div>
+                <div class="notif-body">
+                  <div class="notif-top"><span class="notif-app">HOUZI</span><span class="notif-time">1h ago</span></div>
+                  <div class="notif-title">You received a new 5★ review</div>
+                  <div class="notif-text">Your agency just got a fresh review.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-5 order-2 order-lg-1">
+            <h3>Stay in the Loop with Push Notifications</h3>
+            <p class="pt-5">Houzi keeps everyone engaged with real-time push notifications — so buyers never miss a
+              listing and your agents never miss a lead.</p>
+            <ul>
+              <li><i class="bx bx-search-alt"></i> <strong>Saved-search alerts:</strong> new matching listings, the
+                moment they go live.</li>
+              <li><i class="bx bx-user-plus"></i> <strong>Leads &amp; inquiries:</strong> instant alerts when a client
+                reaches out.</li>
+              <li><i class="bx bx-star"></i> <strong>Reviews &amp; deals:</strong> stay on top of new reviews and CRM
+                updates.</li>
             </ul>
           </div>
         </div>
@@ -625,11 +773,11 @@
             <img src="assets/img/conclusion-smartphone.png" class="img-fluid no-card-style" alt="Conclusion">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1">
-            <h3>Flexible and Powerful</h3>
+            <h3>Ready to launch your app?</h3>
             <p class="py-5">
-              Houzi is a super flexible and powerful mobile app with top-notch features for real
-              estate agents and companies. It comes with slick design, awesome ui and ux, multiple styling
-              options, gorgeous typography and highly customizable features. Purchase today.</p>
+              Everything you've seen — advanced search, rich listings, a full CRM, push notifications and AI-powered
+              setup — is yours with a single one-time license. Buy Houzi today and put your real estate business in
+              every client's pocket.</p>
             <!-- 
             <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-google-play"></i>Try
                 Demo</a> -->
@@ -651,10 +799,9 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Gallery</h2>
-          <p class="py-2">Houzi is packed with new features that help you connect with your customers. It is an
-            experience that is simpler, more useful and more enjoyable. Take a closer look at beautifully crafted app
-            for your business.</p>
+          <h2>See the app, screen by screen</h2>
+          <p class="py-2">Swipe through the real Houzi interface — home, search, maps, property pages, agent profiles,
+            CRM and more, exactly as your clients and agents will see it.</p>
         </div>
 
       </div>
@@ -911,101 +1058,97 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Pricing</h2>
-          <p class="py-2">Get answers before you buy. Checkout the demo version to know the full features offered in the
-            app.</p>
+          <h2>Simple, one-time pricing</h2>
+          <p class="py-2">One license. No subscriptions, no hidden fees — pay once and get every future update free.</p>
         </div>
 
-        <div class="row no-gutters justify-content-center">
+        <div class="row align-items-center g-4 justify-content-center pricing-row">
 
-          <div class="col-lg-5 box">
-            <h3>Buy Houzi</h3>
+          <div class="col-lg-5">
+            <div class="box price-card">
+              <h3>Houzi License</h3>
+              <h4>$59 <span>One-time payment</span></h4>
+              <div class="price-benefits-mini">
+                <span><i class="bx bx-check"></i> Lifetime free updates</span>
+                <span><i class="bx bx-check"></i> Full Flutter source code</span>
+                <span><i class="bx bx-check"></i> iOS &amp; Android</span>
+              </div>
+              <a href="https://codecanyon.net/item/houzi-real-estate-app/39753350" class="upwork-btn scrollto">Buy on
+                CodeCanyon</a>
+              <p class="pricing-secure"><i class="bx bx-lock-alt"></i> Secure checkout · No hidden fees</p>
+              <p class="pricing-demo">Want to try first? Get the live demo on
+                <a href="https://apps.apple.com/us/app/houzi-app-for-houzez/id1598357211">App Store</a> or
+                <a href="https://play.google.com/store/apps/details?id=com.booleanbites.houzez">Google Play</a>.</p>
+            </div>
+          </div>
 
-            <h4>$59 <span> One license</span></h4>
-            <ul>
+          <div class="col-lg-6">
+            <h3 class="includes-title">Everything included</h3>
+            <ul class="pricing-features">
               <li><i class="bx bx-check"></i> Flutter App Source Code</li>
-              <li><i class="bx bx-check"></i> Dynamic home sections with many item design</li>
-              <li><i class="bx bx-check"></i> Advanced Searh Filters</li>
+              <li><i class="bx bx-check"></i> Dynamic home sections</li>
+              <li><i class="bx bx-check"></i> Advanced search filters</li>
               <li><i class="bx bx-check"></i> Comprehensive property profile</li>
-              <li><i class="bx bx-check"></i> Property Images gallery</li>
-              <li><i class="bx bx-check"></i> Agent and Agency list & profiles</li>
-              <li><i class="bx bx-check"></i> Reviews for property & agencies</li>
-              <li><i class="bx bx-check"></i> Saved searches and get push notifications</li>
-              <li><i class="bx bx-check"></i> Map view for property listing</li>
+              <li><i class="bx bx-check"></i> Property images gallery</li>
+              <li><i class="bx bx-check"></i> Agent &amp; agency profiles</li>
+              <li><i class="bx bx-check"></i> Reviews for property &amp; agencies</li>
+              <li><i class="bx bx-check"></i> Saved searches &amp; alerts</li>
+              <li><i class="bx bx-check"></i> Map view for listings</li>
               <li><i class="bx bx-check"></i> Push notifications</li>
-              <li><i class="bx bx-check"></i> Membership packages via in-app-purchase</li>
-              <li><i class="bx bx-check"></i> Add property (quick and detailed) from app</li>
-              <li><i class="bx bx-check"></i> CRM: Leads, Activity, Inquiries, Deals dashboard</li>
-              <li><i class="bx bx-check"></i> Social login with facebook, google and apple</li>
-              <li><i class="bx bx-check"></i> Admob integration ready</li>
-              <li><i class="bx bx-check"></i> RTL supported, ready to translate.</li>
-              <li><i class="bx bx-check"></i> Available in EN, ES, FR, RU, AR, TU & more.</li>
-              <li><i class="bx bx-check"></i> <strong>Houzi AI Agent Skills</strong> for rapid customization</li>
+              <li><i class="bx bx-check"></i> Membership in-app purchases</li>
+              <li><i class="bx bx-check"></i> Add property from the app</li>
+              <li><i class="bx bx-check"></i> CRM: leads, activity, deals</li>
+              <li><i class="bx bx-check"></i> Facebook, Google &amp; Apple login</li>
+              <li><i class="bx bx-check"></i> AdMob integration ready</li>
+              <li><i class="bx bx-check"></i> RTL &amp; translation ready</li>
+              <li><i class="bx bx-check"></i> EN, ES, FR, RU, AR, TU &amp; more</li>
+              <li><i class="bx bx-check"></i> <strong>Houzi AI Agent Skills</strong></li>
             </ul>
-            <a href="https://codecanyon.net/item/houzi-real-estate-app/39753350" class="upwork-btn scrollto">Buy on
-              CodeCanyon</a>
-            <br>
-            <!-- <a href="https://www.upwork.com/services/product/1467852556617240576" class="upwork-btn scrollto">Buy on Upwork</a> -->
-            <!-- <a href="https://www.fiverr.com/share/eEpXDY" class="get-started-btn scrollto">Buy on Fiverr</a> -->
-          </div>
-
-          <div class="col-lg-5 box featured" style="display:none;">
-            <h3>Pro Version</h3>
-            <h4>Contact Us<span>life time</span></h4>
-            <ul>
-              <li><i class="bx bx-check"></i> Everything in Base version</li>
-              <li><i class="bx bx-check"></i> Property reviews and rating</li>
-              <li><i class="bx bx-check"></i> Leads and inquiries management</li>
-              <li><i class="bx bx-check"></i> Nearby places via Yelp</li>
-              <li><i class="bx bx-check"></i> Mortgage finance calculator</li>
-              <li><i class="bx bx-check"></i> Property Insights Data</li>
-              <li><i class="bx bx-check"></i> Push notifications and alerts</li>
-              <li><i class="bx bx-check"></i> Agency profile chart data</li>
-            </ul>
-            <a href="#contact" class="get-started-btn scrollto">Buy</a>
-          </div>
-
-          <div class="col-lg-5 box">
-            <h3>Hire us to publish your App</h3>
-            <h4>$699<span> Android iPhone Apps</span></h4>
-
-            <ul>
-              <li><i class="bx bx-check"></i> Buy Houzi from <a
-                  href="https://codecanyon.net/item/houzi-real-estate-app/39753350" target="_blank">CodeCanyon</a></li>
-              <li><i class="bx bx-check"></i> Provide icon, firebase and store access</li>
-              <li><i class="bx bx-check"></i> Few details, description and tagline</li>
-              <br />
-              <li> We'll do:</li>
-              <li><i class="bx bx-check"></i> Rebrand with your logo and colors</li>
-              <li><i class="bx bx-check"></i> Firebase, Google Cloud setup</li>
-              <li><i class="bx bx-check"></i> Social login, phone signup integration</li>
-              <li><i class="bx bx-check"></i> Push notifications and deep-links setup</li>
-              <li><i class="bx bx-check"></i> Configure in-app purchases for membership</li>
-              <li><i class="bx bx-check"></i> Apps published to AppStore and GooglePlay</li>
-              <li><i class="bx bx-check"></i> Post-launch care: 30 days reliability support</li>
-              <li><i class="bx bx-check"></i> Source Code Ownership of approved app</li>
-            </ul>
-            <a href="https://www.upwork.com/services/product/1467852556617240576" class="upwork-btn scrollto">Hire us on
-              Upwork</a>
-
-            <a href="https://www.fiverr.com/share/eEpXDY" class="get-started-btn scrollto">Hire us on Fiverr</a>
-            <br />
-            <br />
-            <br />
-            <h3>Custom features</h3>
-
-            <ul class="">
-              <li>If you have any feature or requirements that you want exclusively in your app, contact us and our
-                excellent team will make sure to exceed your expectation.</li>
-
-            </ul>
-            <a href="#contact" class="get-started-btn scrollto">Contact Us</a>
           </div>
 
         </div>
 
       </div>
     </section><!-- End Pricing Section -->
+
+    <!-- ======= Done-for-you Service Section ======= -->
+    <section id="done-for-you" class="done-for-you section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-7">
+            <span class="dfy-badge">OPTIONAL SERVICE</span>
+            <h2>Prefer we launch it for you?</h2>
+            <p class="dfy-lead">Don't want to deal with builds, Firebase, and app-store submissions? Our team rebrands
+              Houzi with your identity and publishes it to the App Store and Google Play — completely done for you.</p>
+            <ul class="dfy-list">
+              <li><i class="bx bx-check"></i> Rebrand with your logo &amp; colors</li>
+              <li><i class="bx bx-check"></i> Firebase &amp; Google Cloud setup</li>
+              <li><i class="bx bx-check"></i> Social login &amp; phone signup</li>
+              <li><i class="bx bx-check"></i> Push notifications &amp; deep links</li>
+              <li><i class="bx bx-check"></i> In-app purchases for membership</li>
+              <li><i class="bx bx-check"></i> Published to App Store &amp; Google Play</li>
+              <li><i class="bx bx-check"></i> 30 days post-launch support</li>
+              <li><i class="bx bx-check"></i> Source-code ownership of the approved app</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="dfy-card">
+              <p class="dfy-card-label">Done-for-you launch</p>
+              <div class="dfy-card-headline">We publish it for you</div>
+              <p class="dfy-note">Pricing depends on your app and requirements — get a quick quote on Upwork or Fiverr.
+                The Houzi license is purchased separately from CodeCanyon.</p>
+              <a href="https://www.upwork.com/services/product/1467852556617240576" class="dfy-btn primary">Get a quote on
+                Upwork</a>
+              <a href="https://www.fiverr.com/share/eEpXDY" class="dfy-btn secondary">Get a quote on Fiverr</a>
+              <a href="#contact" class="dfy-btn ghost">Need custom features? Contact us →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Done-for-you Service Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -1145,34 +1288,14 @@
       </div>
     </section><!-- End Frequently Asked Questions Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="" class="section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2></h2>
-          <h4 class="py-2">Houzi is an app that powers your Houzez based website. Its has intuitive, clean and slick UI,
-            that offers great user experience. For more info you can reach the team at <a
-              href="mailto:houzi@booleanbites.com">houzi@booleanbites.com</a></h4>
-        </div>
-
-        <div class="row no-gutters">
-
-
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p class="py-2">We believe that it doesn’t cost a thing to talk, so why not get in touch with us and begin
-            this awesome journey. Get answers before you buy.</p>
+          <h2>Questions before you buy?</h2>
+          <p class="py-2">Tell us about your project — we're happy to help with Houzez compatibility, customization, or a
+            done-for-you launch, and we'll get back to you quickly.</p>
         </div>
 
         <div class="row  justify-content-center">
@@ -1276,7 +1399,7 @@
     <div class="container py-1 text-center pt-4">
       <div class="copyright" style="float: none;">
         <!-- <p class="p-small statement">Copyright © <a href="#your-link">BooleanBite Ltd. Pakistan</a></p> -->
-        &copy; Copyright 2021 <a href="https://booleanbites.com/">BooleanBite Ltd. Pakistan</a>. All Rights Reserved
+        &copy; Copyright 2026 <a href="https://booleanbites.com/">BooleanBite Ltd. Pakistan</a>. All Rights Reserved
       </div>
 
     </div>
@@ -1296,6 +1419,69 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- ======= Conversion click tracking (all via GA4 for Performance Max) ======= -->
+  <!--
+    Tracks the actions that actually matter instead of raw page loads, all as GA4 events
+    so they can be imported as Performance Max conversion goals:
+      1. Any click to CodeCanyon   -> GA4 "begin_checkout" (buy intent; checkout finishes
+         off-site on Envato, which we can't confirm, so this is the honest event name).
+      2. Any click to Upwork/Fiverr -> GA4 "generate_lead" (the hire-us lead).
+
+    SETUP (no Ads conversion label / snippet needed):
+      a) Deploy, then click each button once on the LIVE site so the events fire.
+         Confirm in GA4 -> Reports -> Realtime (events won't exist until fired once).
+      b) GA4 -> Admin -> Events -> mark "begin_checkout" and "generate_lead" as Key events.
+      c) Google Ads -> Goals -> Conversions -> + Create -> Import -> Google Analytics 4 (web)
+         -> import both key events. Set them as PRIMARY goals for the PMax campaign.
+      d) Do NOT use the old page-load / "Page view" conversion as a PMax goal - it would
+         make PMax optimise for cheap traffic instead of buyers. Remove/archive it.
+  -->
+  <script>
+    (function () {
+      var GA4_ID = 'G-XQY8K6ML9R'; // GA4 property (also feeds Performance Max via import)
+
+      // Runs `fire(callback)` to send the event, then navigates once the tag acknowledges
+      // it (or after a 900ms safety timeout) so the beacon isn't lost when the page unloads.
+      function trackThenGo(link, e, fire) {
+        if (typeof gtag !== 'function') return; // no tag loaded -> let the browser navigate
+        var newTab = link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey;
+        if (newTab) { fire(function () {}); return; } // this page stays alive; no delay needed
+        e.preventDefault();
+        var url = link.href, done = false;
+        var go = function () { if (!done) { done = true; window.location = url; } };
+        fire(go);
+        setTimeout(go, 900);
+      }
+
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest ? e.target.closest('a[href]') : null;
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+
+        if (href.indexOf('codecanyon.net') !== -1) {
+          // Buy intent -> GA4 begin_checkout.
+          trackThenGo(link, e, function (cb) {
+            gtag('event', 'begin_checkout', {
+              'send_to': GA4_ID,
+              'item_name': 'Houzi Real Estate App license',
+              'event_callback': cb
+            });
+          });
+        } else if (href.indexOf('upwork.com') !== -1 || href.indexOf('fiverr.com') !== -1) {
+          // Hire-us lead -> GA4 generate_lead.
+          var source = href.indexOf('fiverr.com') !== -1 ? 'fiverr' : 'upwork';
+          trackThenGo(link, e, function (cb) {
+            gtag('event', 'generate_lead', {
+              'send_to': GA4_ID,
+              'lead_source': source,
+              'event_callback': cb
+            });
+          });
+        }
+      }, true);
+    })();
+  </script>
 </body>
 
 </html>
