@@ -2056,3 +2056,252 @@ section {
   display: block;
   margin-bottom: 4px;
 }
+
+/*--------------------------------------------------------------
+# Hero AI pill
+--------------------------------------------------------------*/
+.hero-ai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  margin-bottom: 22px;
+  border-radius: 980px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.hero-ai-pill:hover {
+  background: rgba(99, 102, 241, 0.14);
+  color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+.hero-ai-pill .hero-ai-pill-badge {
+  background: linear-gradient(135deg, #0071e3, #a855f7);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 980px;
+}
+
+.hero-ai-pill i {
+  font-size: 18px;
+  color: #a855f7;
+}
+
+/*--------------------------------------------------------------
+# Houzi AI Section
+--------------------------------------------------------------*/
+.houzi-ai {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(99, 102, 241, 0.06) 0%, rgba(255, 255, 255, 0) 45%),
+    radial-gradient(circle at 88% 100%, rgba(0, 113, 227, 0.06) 0%, rgba(255, 255, 255, 0) 45%),
+    var(--color-bg);
+}
+
+.ai-badge.ai-badge-center {
+  display: inline-block;
+  margin: 0 auto 18px;
+}
+
+.houzi-ai-cards {
+  margin-bottom: 20px;
+}
+
+.ai-feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.ai-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.ai-feature-shot {
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px 0;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.06), rgba(0, 113, 227, 0.02));
+}
+
+.ai-feature-shot img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.ai-feature-body {
+  padding: 26px 28px 32px;
+}
+
+.ai-feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #6d28d9;
+  background: rgba(109, 40, 217, 0.08);
+  padding: 5px 12px;
+  border-radius: 980px;
+  margin-bottom: 14px;
+}
+
+.ai-feature-tag i {
+  font-size: 15px;
+}
+
+.ai-feature-body h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.ai-feature-body p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Bring Your Own Key band */
+.ai-byok {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 44px;
+  border-radius: var(--radius-lg);
+  background: rgba(29, 29, 31, 0.97);
+  color: #f5f5f7;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+.ai-byok-content {
+  flex: 1 1 460px;
+}
+
+.ai-byok-content h3 {
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px 0;
+}
+
+.ai-byok-content h3 i {
+  color: #a855f7;
+}
+
+.ai-byok-content p {
+  color: rgba(245, 245, 247, 0.72);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 18px 0;
+}
+
+.ai-byok-content p strong {
+  color: #fff;
+}
+
+.ai-provider-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ai-provider-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #f5f5f7;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 980px;
+}
+
+.ai-provider-chip i {
+  font-size: 18px;
+  color: #a855f7;
+}
+
+.ai-byok-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ai-byok .buy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0071e3, #a855f7);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+  transition: 0.25s;
+}
+
+.ai-byok .buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(99, 102, 241, 0.45);
+  color: #fff;
+}
+
+.ai-byok-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(245, 245, 247, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ai-byok-link:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .ai-byok {
+    padding: 32px 26px;
+  }
+
+  .ai-byok-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .ai-byok .buy-btn {
+    justify-content: center;
+  }
+}

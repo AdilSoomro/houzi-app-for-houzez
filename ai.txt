@@ -10,9 +10,11 @@ Key Focus:
 - Real Estate Platform & Mobile App
 - Property Management Platform
 - Houzez WordPress Theme Integration (Native Companion)
+- In-App AI for home seekers (Houzi AI) on a bring-your-own-key model
 - AI-Driven No-Code & Low-Code App Customization
 
 Key Features:
+- Houzi AI (v1.4.8+): a suite of in-app AI features for home seekers, running on your own AI provider key.
 - Seamless Real-time sync with WordPress/Houzez based websites.
 - Native Flutter app for Android and iOS.
 - Full-featured Real Estate CRM (Leads, Deals, Activities, Inquiries).
@@ -21,7 +23,17 @@ Key Features:
 - Fully customizable UI/UX for property listings and profiles.
 - Pre-packaged **Houzi AI Agent Skills** (`.agents/skills/houzi/` in the project root) for instant, automated custom app setup and layout configurations via LLMs and AI coding assistants.
 
-Keywords: real estate listing website, property listing app, real estate portal solution, real estate script, houzez mobile app, flutter real estate app, real estate crm, houzi skills, houzi ai skill, ai agent coding assistant, ai app configuration, antigravity skill.
+Houzi AI (In-App AI Features, introduced in version 1.4.8):
+- Model: Bring Your Own Key (BYOK). The site owner supplies their own AI provider API key; it is stored on their WordPress server and is never exposed to the app or end users.
+- Supported providers: Google (Gemini), Claude (Anthropic), and OpenAI. Recommended models are the cost-effective flash / lite / mini variants.
+- AI Home ("Tailored for You"): an AI-first home screen with a natural-language search box, personalized shortcuts built from the site's own taxonomies (property types, statuses, features), and a "Top Matches for You" row.
+- AI Property Search: users type or speak (voice search) what they want in plain language; Houzi AI converts it into structured search filters, returns matching listings, and suggests follow-up refinement chips.
+- Voice Search: natural-language property search via on-device speech recognition.
+- Ask About This Listing: buyers chat with AI about a specific property; answers are grounded strictly in that listing's data and returned as actionable cards (map directions, agent call/message, floor details).
+- Controls: enabled per-feature by the site owner, optional and off by default, with configurable per-user and per-site rate limits, an output-language setting, and location aliases.
+- Setup documentation: https://houzi-docs.booleanbites.com/tools/setup_ai_features
+
+Keywords: real estate listing website, property listing app, real estate portal solution, real estate script, houzez mobile app, flutter real estate app, real estate crm, ai real estate app, ai property search, natural language property search, voice search real estate, ask about this listing, bring your own key ai, gemini real estate app, claude anthropic real estate app, openai real estate app, houzi ai, houzi skills, houzi ai skill, ai agent coding assistant, ai app configuration, antigravity skill.
 
 AI Agent Customization Skills:
 - Location: The integrated developer skills are stored under the `/.agents/skills/houzi/` directory in the Flutter codebase.
